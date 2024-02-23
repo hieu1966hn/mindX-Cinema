@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MindX Cinema</title>
+    <title>Search - MindX Cinema</title>
     <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -15,7 +15,7 @@
     />
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/search.css" />
   </head>
   <body>
     <div class="backdrop">
@@ -38,44 +38,27 @@
         <i style="font-size: 25px" class="fa-solid fa-magnifying-glass"></i
       ></a>
     </div>
-    <div class="hero-section">
-      <img
-        id="hero-image"
-        class="hero-image fade-in"
-        onload="this.style.opacity = '0.5'"
-        alt=""
-      />
 
-      <div class="hero-section-info">
+    <main>
+      <form method="get">
+        <h1>Find your favorite movies and TV shows</h1>
         <div>
-          <p id="hero-title" class="hero-section-info-title"></p>
-          <p
-            id="hero-description"
-            class="hero-section-info-description multiline-ellipsis-4"
-          ></p>
-          <div class="action-buttons-container">
-            <a id="watch-now-btn" class="btn">
-              <i class="fa-regular fa-circle-play"></i>
-              <span>Watch Now</span>
-            </a>
-            <a id="view-info-btn" class="btn">
-              <i class="fa-solid fa-circle-info"></i>
-              <span>View Info</span>
-            </a>
-          </div>
+          <button type="submit">
+            <i style="font-size: 25px" class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input
+            name="q"
+            id="q"
+            type="text"
+            placeholder="Search..."
+            value=""
+            autocomplete="off"
+          />
         </div>
-      </div>
-      <div class="hero-preview-img-container">
-        <img
-          class="fade-in"
-          onload="this.style.opacity = '1'"
-          id="hero-preview-image"
-          alt=""
-        />
-      </div>
-    </div>
+      </form>
 
-    <main></main>
+      <div id="movie-grid"></div>
+    </main>
 
     <footer>
       <p>Copyright &copy; MindX School</p>
@@ -96,6 +79,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="./scripts/config.js"></script>
-    <script src="./scripts/home.js"></script>
+    <script src="./scripts/search.js"></script>
   </body>
 </html>
